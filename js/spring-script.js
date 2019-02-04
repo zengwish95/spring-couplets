@@ -4,7 +4,7 @@
 		var settings = $.extend({
 			horizontal: true,
 			vertical: true,
-			speed: 100, // In pixels per second
+			speed: 800, // In pixels per second
 			container: $(this).parent(),
 			bumpEdge: function () {}
 		}, options);
@@ -67,10 +67,9 @@
 $(document).ready( function() {
 
 	$('.marquee').marqueeify({
-		speed: 300,
+		speed: 388,
 		bumpEdge: function () {
-			var newColor = "hsl(" + Math.floor(Math.random()*360) + ", 100%, 50%)";
-			$('.marquee .logo').css('fill', newColor);
+			document.getElementById("fu").style.transform = "rotate(180deg)";
 		}
 	});
 });

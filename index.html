@@ -6,6 +6,16 @@
     <title>春联 Spring Festival Couplets</title>
     <link href="css/styles-reset.css" rel="reset" media="screen" type="text/css">
     <link href="css/spring-styles.css" rel="stylesheet" media="screen" type="text/css">
+    <script>
+      (function(d) {
+        var config = {
+          kitId: 'tnz6tps',
+          scriptTimeout: 3000,
+          async: true
+        },
+        h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+      })(document);
+    </script>
     <script src="https://code.jquery.com/jquery-3.3.1.js"
     integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
   crossorigin="anonymous"></script>
@@ -13,9 +23,41 @@
 </head>
 
 <body>
-  <div class="marquee">
-    <img width="153px" src="images/fu.svg"> </svg>
+  <div class="marquee" id="fu">
+    <img src="images/fu.svg"> </svg>
   </div>
+
+  <div class="container">
+    <div class="top">
+      <h1> 力努需還 </h1>
+    </div>
+    <div class="bottom">
+      <div class="left">
+        <h2> 磕 </h2>
+        <h2> 磕 </h2>
+        <h2> 絆 </h2>
+        <h2> 絆 </h2>
+        <h2> 解 </h2>
+        <h2> 不 </h2>
+        <h2> 出 </h2>
+        <h2> 許 </h2>
+        <h2> 多 </h2>
+        <h3> BUG </h3>
+      </div>
+      <div class="right">
+        <h2> 尋 </h2>
+        <h2> 尋 </h2>
+        <h2> 覓 </h2>
+        <h2> 覓 </h2>
+        <h2> 找 </h2>
+        <h2> 不 </h2>
+        <h2> 到 </h2>
+        <h2> 那 </h2>
+        <h2> 個 </h2>
+        <h3> DIV </h3>
+      </div>
+    </div>
+
 </body>
 
 
