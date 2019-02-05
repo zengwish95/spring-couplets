@@ -1,7 +1,7 @@
 
 /* Global: */
 html, body {
-  background: #a32626;
+  background: #ababab;
   color: #000000;
   height: 100%;
   margin: 0;
@@ -13,6 +13,7 @@ html, body {
 	font-style: normal;
 }
 h1 {
+	margin: 1rem;
 	font-size: 4vw;
 	letter-spacing: 1vw;
 }
@@ -24,24 +25,21 @@ h3 {
 	margin-top: 0;
 	font-size: 3vw;
 }
-.bottom {
-	display: grid;
-	grid-template-columns: repeat(8, 1fr);
-	grid-column-gap: 1rem;
-}
 .container {
-	height: 100%;
-	min-height: 100%;
-	width: 80%;
+  height: 80vh;
+	width: 66%;
+	display: grid;
+	grid-template-columns: 13% auto 13%;
+	grid-template-areas:
+    "xialian . shanglian";
 	margin: auto;
-	z-index: 88;
 }
 .marquee {
   display: block;
   left: 0;
   position: absolute;
   top: 0;
-	width: 288px;
+	width: 28vw;
 	z-index: 8;
 }
 .top, .right, .left {
@@ -50,18 +48,28 @@ h3 {
 	box-shadow: 0px 0px 1vw black;
 }
 .top {
-	margin: auto;
-	top: 10vw;
-	width: 28vw;
+	width: 30vw;
+	margin: 5vw auto 3vw auto;
+  display: grid;
+  justify-content: center;
+	align-items: center;
 }
 .right, .left {
 	display: inline-block;
 }
 .right {
-	grid-column: 8/9;
+	grid-area: shanglian;
+	display: grid;
+	justify-content: center;
+	align-items: center;
+  height: 70vh;
 }
 .left {
-	grid-column: 1/2;
+	grid-area: xialian;
+	display: grid;
+  justify-content: center;
+	align-items: center;
+  height: 70vh;
 }
 img {
   display: block;
@@ -81,5 +89,10 @@ img {
 }
 
 @media only screen and (max-width: 540px) {
-
+	.container {
+    width: 82%;
+		display: grid;
+		grid-template-columns: 20% auto 20%;
+		margin: 0 auto;
+	}
 }
