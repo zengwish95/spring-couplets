@@ -6,7 +6,9 @@
 			vertical: true,
 			speed: 800, // In pixels per second
 			container: $(this).parent(),
-			bumpEdge: function () {}
+			bumpEdge: function () {
+        document.getElementById("fu").style.transform = "rotate(180deg)";
+      }
 		}, options);
 
 		return this.each(function () {
@@ -66,10 +68,13 @@
 
 $(document).ready( function() {
 
+var degree = 0;
+
 	$('.marquee').marqueeify({
 		speed: 388,
 		bumpEdge: function () {
-			document.getElementById("fu").style.transform = "rotate(180deg)";
+      degree += 180;
+			document.getElementById("fu").style.transform = `rotate(${degree}deg)`;
 		}
 	});
 });

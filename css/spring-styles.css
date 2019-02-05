@@ -11,19 +11,20 @@ html, body {
 	font-family: source-han-serif-sc, serif;
 	font-weight: 900;
 	font-style: normal;
+  font-size: 10px;
 }
 h1 {
 	margin: 1rem;
-	font-size: 4vw;
+	font-size: 4rem;
 	letter-spacing: 1vw;
 }
 h2 {
-	font-size: 4vw;
+	font-size: 4rem;
 	margin: 0;
 }
 h3 {
 	margin-top: 0;
-	font-size: 3vw;
+	font-size: 3rem;
 }
 .container {
   height: 80vh;
@@ -31,7 +32,7 @@ h3 {
 	display: grid;
 	grid-template-columns: 13% auto 13%;
 	grid-template-areas:
-    "xialian . shanglian";
+    "xialian door shanglian";
 	margin: auto;
 }
 .marquee {
