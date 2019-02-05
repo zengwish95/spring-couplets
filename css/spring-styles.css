@@ -27,20 +27,20 @@ h3 {
 	font-size: 3rem;
 }
 .container {
-  height: 80vh;
 	width: 66%;
 	display: grid;
 	grid-template-columns: 13% auto 13%;
 	grid-template-areas:
     "xialian door shanglian";
 	margin: auto;
+  z-index: 88;
 }
 .marquee {
   display: block;
   left: 0;
   position: absolute;
   top: 0;
-	width: 28vw;
+	width: 16vw;
 	z-index: 8;
 }
 .top, .right, .left {
@@ -50,13 +50,16 @@ h3 {
 }
 .top {
 	width: 30vw;
-	margin: 5vw auto 3vw auto;
+  height: 7vw;
+	margin: 3vw auto 1vw auto;
   display: grid;
   justify-content: center;
 	align-items: center;
+  background-image: url("../images/banner-tex2.png");
 }
 .right, .left {
 	display: inline-block;
+  background-image: url("../images/banner-tex2.png");
 }
 .right {
 	grid-area: shanglian;
@@ -74,26 +77,49 @@ h3 {
 }
 img {
   display: block;
+  z-index: 8;
 }
 ::selection {
 	background: #ffed46;
 	color: black;
 }
-
 /* Media Query */
-@media only screen and (max-width: 1280px) {
-
+@media only screen and (max-width: 999px) {
+  html, body {
+    font-size: 8px;
+  }
+  .top {
+    width: 40vw;
+    height: 15vw;
+    margin: 6vw auto 3vw auto;
+  }
+	.container {
+    width: 75%;
+		display: grid;
+		grid-template-columns: 20% auto 20%;
+		margin: 0 auto;
+	}
+  .marquee {
+    width: 30vw;
+  }
 }
 
-@media only screen and (max-width: 1180px) {
-
-}
-
-@media only screen and (max-width: 540px) {
+@media only screen and (max-width: 599px) {
+  html, body {
+    font-size: 6px;
+  }
+  .top {
+    width: 40vw;
+    height: 15vw;
+    margin: 8vw auto 6vw auto;
+  }
 	.container {
     width: 82%;
 		display: grid;
 		grid-template-columns: 20% auto 20%;
 		margin: 0 auto;
 	}
+  .marquee {
+    width: 40vw;
+  }
 }
