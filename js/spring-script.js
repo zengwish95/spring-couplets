@@ -78,3 +78,12 @@ var degree = 0;
 		}
 	});
 });
+
+function english() {
+  var x = document.getElementById("lang-en");
+  if (x.style.display === "inherit") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "inherit";
+  }
+}

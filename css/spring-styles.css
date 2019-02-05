@@ -12,6 +12,7 @@ html, body {
 	font-weight: 900;
 	font-style: normal;
   font-size: 10px;
+  -webkit-font-smoothing: antialiased;
 }
 h1 {
 	margin: 1rem;
@@ -31,7 +32,7 @@ h3 {
 	display: grid;
 	grid-template-columns: 13% auto 13%;
 	grid-template-areas:
-    "xialian door shanglian";
+    "xialian center shanglian";
 	margin: auto;
   z-index: 88;
 }
@@ -75,6 +76,33 @@ h3 {
 	align-items: center;
   height: 70vh;
 }
+.caption {
+  grid-area: center;
+  display: grid;
+  grid-template-columns: 10% auto 10%;
+  grid-template-rows: 10% auto;
+  grid-template-areas:
+    "left center right"
+    "left . right";
+  text-align: center;
+  font-size: 2rem;
+}
+p {
+  color: #757575;
+}
+.vtext-left, .vtext-right {
+  writing-mode: vertical-rl;
+  margin: 0 auto;
+}
+.vtext-left {
+  grid-area: left;
+}
+.vtext-right {
+  grid-area: right;
+}
+.vtext-top {
+  margin-top: 0;
+}
 img {
   display: block;
   z-index: 8;
@@ -82,6 +110,23 @@ img {
 ::selection {
 	background: #ffed46;
 	color: black;
+}
+#lang-en {
+  display: none;
+}
+#button {
+  margin: 0 auto;
+  font-size: 1.5rem;
+  text-align: center;
+  color: #757575;
+  padding-bottom: 2px;
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+#button:hover {
+  color: #d82727;
+  border-bottom: none;
 }
 /* Media Query */
 @media only screen and (max-width: 999px) {
