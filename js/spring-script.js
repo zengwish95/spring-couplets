@@ -1,4 +1,3 @@
-
 (function ($, window, undefined) {
 	$.fn.marqueeify = function (options) {
 		var settings = $.extend({
